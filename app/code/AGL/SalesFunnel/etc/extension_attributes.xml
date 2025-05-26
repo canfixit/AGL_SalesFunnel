@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+    <attribute code="cart_count" type="string" />
+</extension_attributes>

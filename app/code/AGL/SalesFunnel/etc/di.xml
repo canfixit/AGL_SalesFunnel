@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="AGL\SalesFunnel\Setup\InstallData">
+        <arguments>
+            <argument name="eavSetupFactory" xsi:type="object">Magento\Eav\Setup\EavSetupFactory</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="agl_salesfunnel_productrepository_plugin" type="AGL\SalesFunnel\Plugin\Api\ProductRepositoryPlugin" sortOrder="10" />
+    </type>
+    <preference for="AGL\SalesFunnel\Api\AglProductSearchInterface" type="AGL\SalesFunnel\Model\AglProductSearch" />
+    <type name="Magento\OfflineShipping\Model\Carrier\Flatrate">
+        <plugin name="agl_salesfunnel_flatrate_plugin" type="AGL\SalesFunnel\Plugin\Shipping\FlatratePlugin" sortOrder="10" />
+    </type>
+</config>

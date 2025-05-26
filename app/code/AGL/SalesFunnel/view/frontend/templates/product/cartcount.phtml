@@ -1,0 +1,21 @@
+<?php
+/** @var $block \AGL\SalesFunnel\Block\Product\CartCount */
+if ($block->canShow()):
+?>
+<div data-bind="scope: 'aglCartCount'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "aglCartCount": {
+                    "component": "AGL_SalesFunnel/js/cart-count"
+                }
+            }
+        }
+    }
+}
+</script>
+<?php endif; ?> 
