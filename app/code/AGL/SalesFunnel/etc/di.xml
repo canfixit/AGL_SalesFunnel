@@ -12,4 +12,5 @@
     <type name="Magento\OfflineShipping\Model\Carrier\Flatrate">
         <plugin name="agl_salesfunnel_flatrate_plugin" type="AGL\SalesFunnel\Plugin\Shipping\FlatratePlugin" sortOrder="10" />
     </type>
+
 </config>

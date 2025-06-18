@@ -2,7 +2,6 @@
 namespace AGL\SalesFunnel\Block\Product;
 
 use Magento\Catalog\Block\Product\Context;
-use Magento\Catalog\Model\Product;
 use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\View\Element\Template;
 
@@ -38,4 +37,4 @@ class CartCount extends Template
         $row = $connection->fetchRow($select);
         return $row ? (int)$row['cart_count'] : 0;
     }
-} 
+}
