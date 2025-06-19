@@ -18,7 +18,6 @@ class FlatratePlugin
 
     public function afterCollectRates($subject, $result, RateRequest $request)
     {
-        $this->logger->debug('AGL FlatratePlugin triggered');
         if (!$result || !isset($result->getAllRates()[0])) {
             return $result;
         }
@@ -32,10 +31,8 @@ class FlatratePlugin
             }
         }
         if ($hasAglProduct) {
-            $this->logger->debug('AGL product found, setting flatrate to 10');
             foreach ($result->getAllRates() as $rate) {
-                $this->logger->debug('shipping code '.$rate->getCode());
-                if ($rate->getCode() === 'flatrate_flatrate') {
+                if ($rate->getCarrier() === 'flatrate') {
                     $rate->setPrice(10);
                     $rate->setCost(10);
                 }
