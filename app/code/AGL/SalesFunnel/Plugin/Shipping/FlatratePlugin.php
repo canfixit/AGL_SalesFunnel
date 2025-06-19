@@ -26,7 +26,7 @@ class FlatratePlugin
         $hasAglProduct = false;
         foreach ($items as $item) {
             $product = $item->getProduct();
-            if ($product && $product->getCustomAttribute('agl_product')->getValue()) {
+            if ($product && $product->getData('agl_product')) {
                 $hasAglProduct = true;
                 break;
             }

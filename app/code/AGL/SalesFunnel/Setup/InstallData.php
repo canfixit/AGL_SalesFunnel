@@ -40,7 +40,7 @@ class InstallData implements InstallDataInterface
                 'searchable' => true,
                 'filterable' => true,
                 'comparable' => false,
-                'visible_on_front' => false,
+                'visible_on_front' => true,
                 'used_in_product_listing' => true,
                 'unique' => false,
                 'apply_to' => ''
@@ -59,4 +59,4 @@ class InstallData implements InstallDataInterface
             null // sort order, optional
         );
     }
-} 
+}
